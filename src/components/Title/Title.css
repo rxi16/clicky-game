@@ -1,0 +1,11 @@
+.title {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 1.5em;
+  color: white;
+  background: #3F527E;
+  border-top: 20px solid #3F527E;
+  border-bottom: 20px solid #3F527E;
+  margin: 0;
+}

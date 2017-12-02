@@ -1,0 +1,12 @@
+.wrapper {
+  padding-top: 0px;
+  /*background: #DCE4F2;*/
+  background-image: url("http://planeticerink.townsquareinteractive.com/files/2013/09/123076-1920x1200.jpg");
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 0px;
+  justify-content: space-around;
+  align-content: flex-start;
+  overflow: auto;
+}
