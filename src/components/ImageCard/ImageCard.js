@@ -5,7 +5,7 @@ const ImageCard = props => (
     <div className="img-container">
       <img alt={props.name} src={props.image} />
     </div>
-    <span onClick={() => props.removeImage(props.id)} className="remove">
+    <span onClick={() => props.removeImage(props.image)} className="remove">x
     </span>
   </div>
 );
