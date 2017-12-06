@@ -13,19 +13,11 @@ class App extends Component {
   state = {
     images
   };
-  removeImage = id => {
-    // ? Filter this.state.images for images with an id not equal to the id being removed
-    // const images = this.state.images.filter(image => image.id !== id);
+    removeImage = id => {
+    // Filter this.state.images for images with an id not equal to the id being removed
+    const images = this.state.images.filter(image => image.id !== id);
     // Set this.state.images equal to the new images array
-    // this.setState({ images });
-          {this.state.images.map(image => (
-            <ImageCard
-              removeImage={this.removeImage}
-              id={image.id}
-              key={image.id}
-              image={image.image}
-            />
-          ))}
+    this.setState({ images });
   };
   render() {
     return (
@@ -37,45 +29,15 @@ class App extends Component {
         </header>
         <Title>Click on an image to earn points, but don't click on an image more than once.</Title>
         <Wrapper>
-        {this.state.images.map(image => (
-          <ImageCard
-            image={images[0].image}
-          />
-        ))}
-          <ImageCard
-            image={images[1].image}
-          />
-          <ImageCard
-            image={images[2].image}
-          />
-          <ImageCard
-            image={images[3].image}
-          />
-          <ImageCard
-            image={images[4].image}
-          />
-          <ImageCard
-            image={images[5].image}
-          />
-          <ImageCard
-            image={images[6].image}
-          />
-          <ImageCard
-            image={images[7].image}
-          />
-          <ImageCard
-            image={images[8].image}
-          />
-          <ImageCard
-            image={images[9].image}
-          />
-          <ImageCard
-            image={images[10].image}
-          />
-          <ImageCard
-            image={images[11].image}
-          />
-        
+          {this.state.images.map(image => (
+            <ImageCard
+              removeImage={this.removeImage}
+              id={image.id}
+              key={image.id}
+              name={image.name}
+              image={image.image}
+            />
+          ))}
         </Wrapper>
       </div>
     );
